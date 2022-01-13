@@ -21,12 +21,12 @@ const letterPositions = function(sentence) {
   // logic to update results here
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== ' ') {
-      if (results[sentence[i]]) {
-        results[sentence[i]].push(sentence.indexOf(sentence[i], i));
-      } else {
-        results[sentence[i]] = [sentence.indexOf(sentence[i])];
-      }
-
+      // if (results[sentence[i]]) {
+      //   results[sentence[i]].push(sentence.indexOf(sentence[i], i));
+      // } else {
+      //   results[sentence[i]] = [sentence.indexOf(sentence[i])];
+      // }
+      results[sentence[i]] ? results[sentence[i]].push(sentence.indexOf(sentence[i], i)) : results[sentence[i]] = [sentence.indexOf(sentence[i])];
     }
   }
   return results;
