@@ -4,22 +4,22 @@ let tail = require('../tail')
 describe("#tail", () => {
   it("returns 2 for result.length", () => {
     const result = tail(["Hello", "Lighthouse", "Labs"]);
-    assert.deepEqual(result.length, 2);
+    assert.strictEqual(result.length, 2);
   });
   
   it("returns 'Lighthouse' for result[0]", () => {
     const result = tail(["Hello", "Lighthouse", "Labs"]);
-    assert.deepEqual(result[0], "Lighthouse");
+    assert.strictEqual(result[0], "Lighthouse");
   });
   
   it("returns 'Labs' for result[1]", () => {
     const result = tail(["Hello", "Lighthouse", "Labs"]);
-    assert.deepEqual(result[0], "Lighthouse");
+    assert.strictEqual(result[1], "Labs");
   });
 
 it("returns 3 for words.length", () => {
   const words = ["Yo Yo", "Lighthouse", "Labs"];
   tail(words);
-  assert.deepEqual(words.length, 3);
+  assert.strictEqual(words.length, 3);
 });
 });
